@@ -1,0 +1,605 @@
+/* ==========================================================================
+   About Page Stylesheet (about.css)
+   Figma Design Node: 207:1043
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Layout & Common Section Containers
+   -------------------------------------------------------------------------- */
+.about-page-main {
+  width: 100%;
+  background-color: var(--color-white, #ffffff);
+  overflow-x: hidden;
+}
+
+.about-container {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-section-heading {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #373737;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.about-heading-center {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Section 1: Who We Are? (Figma Node 211:1263)
+   Exact match to 1440px design:
+   - Container padding: pt: 60px, pb: 100px, px: 100px
+   - Layout: flex gap 52px, items-end
+   - Text column: width 640px
+   - Image column: width 539px, height 540px, border-radius 20px
+   - Paragraphs: 20px, line-height 1.3 (26px), gap 26px
+   -------------------------------------------------------------------------- */
+.about-who-section {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  background-color: var(--color-white, #ffffff);
+}
+
+.about-who-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 52px;
+}
+
+.about-who-content {
+  flex: 0 0 640px;
+  width: 640px;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-who-text {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 300;
+  color: #373737;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin: 0;
+}
+
+.about-who-text p {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.about-who-image-wrap {
+  flex: 0 0 539px;
+  width: 539px;
+  max-width: 100%;
+  aspect-ratio: 539 / 540;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-who-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Section 2: What We Do? (Figma Node 216:1486)
+   -------------------------------------------------------------------------- */
+.about-what-section {
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: var(--color-white, #ffffff);
+}
+
+.about-what-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-what-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  max-width: 976px;
+  margin: 0 auto;
+}
+
+.about-what-subtitle {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 300;
+  color: #373737;
+  margin: 0;
+  text-align: center;
+}
+
+.about-cards-slider-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 290px);
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+}
+
+.about-slider-dots {
+  display: none;
+}
+
+.about-card {
+  background-color: #ffffff;
+  border: 1px solid #00aeef;
+  border-radius: 20px;
+  width: 290px;
+  height: 344px;
+  padding: 27px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 174, 239, 0.15);
+  border-color: #0088cc;
+}
+
+.about-card-icon-wrap {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+  flex-shrink: 0;
+}
+
+.about-card-icon-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+.about-card-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: -0.5px;
+  margin: 0 0 16px 0;
+}
+
+.about-card-desc {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 16.6px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: rgba(55, 55, 55, 0.5);
+  letter-spacing: -0.33px;
+  max-width: 245px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Section 3: Why Choose Us? (Figma Node 230:1533)
+   -------------------------------------------------------------------------- */
+.about-why-section {
+  width: 100%;
+  padding-bottom: 100px;
+  background-color: var(--color-white, #ffffff);
+}
+
+.about-why-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 90px;
+}
+
+.about-why-image-wrap {
+  flex: 0 0 571px;
+  width: 571px;
+  max-width: 100%;
+  aspect-ratio: 571 / 483;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-why-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-why-content {
+  flex: 0 0 571px;
+  width: 571px;
+  max-width: 571px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-why-subtitle {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 300;
+  color: #373737;
+  margin: 0;
+}
+
+.about-why-list {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-why-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.about-why-icon {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.about-why-label {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops (max-width: 1300px) */
+@media (max-width: 1300px) {
+  .about-container {
+    padding: 0 40px;
+  }
+
+  .about-who-container,
+  .about-why-container {
+    gap: 32px;
+  }
+
+  .about-who-content {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .about-who-image-wrap {
+    flex: 0 0 480px;
+    width: 480px;
+    height: auto;
+    aspect-ratio: 539 / 540;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .about-card {
+    width: 100%;
+    height: auto;
+    min-height: 344px;
+  }
+
+  .about-why-image-wrap {
+    flex: 0 0 480px;
+    width: 480px;
+    height: auto;
+    aspect-ratio: 571 / 483;
+  }
+
+  .about-why-content {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .about-who-section,
+  .about-what-section,
+  .about-why-section {
+    padding-bottom: 70px;
+  }
+
+  .about-who-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-who-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-who-image-wrap {
+    width: 100%;
+    max-width: 539px;
+    height: auto;
+    aspect-ratio: 539 / 540;
+    flex: none;
+  }
+
+  .about-cards-slider-wrap {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-cards-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 10px 4px 16px;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    cursor: grab;
+    user-select: none;
+  }
+
+  .about-cards-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-cards-grid.grabbing {
+    cursor: grabbing;
+    scroll-behavior: auto;
+  }
+
+  .about-cards-grid.grabbing * {
+    user-select: none;
+  }
+
+  .about-card {
+    flex: 0 0 290px;
+    width: 290px;
+    height: 344px;
+    scroll-snap-align: center;
+  }
+
+  .about-slider-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .about-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #d0e6f5;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .about-dot.active {
+    width: 24px;
+    background: #00aeef;
+    border-radius: 9999px;
+  }
+
+  .about-why-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-why-image-wrap {
+    width: 100%;
+    max-width: 571px;
+    height: auto;
+    aspect-ratio: 571 / 483;
+    flex: none;
+  }
+
+  .about-why-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-section-heading {
+    font-size: 34px;
+  }
+
+  .about-who-text,
+  .about-what-subtitle,
+  .about-why-subtitle {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .about-why-label {
+    font-size: 22px;
+  }
+}
+
+/* Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 20px;
+  }
+
+  .about-who-section {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .about-what-section,
+  .about-why-section {
+    padding-bottom: 50px;
+  }
+
+  .about-what-container {
+    gap: 36px;
+  }
+
+  .about-section-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .about-who-content {
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .about-who-text,
+  .about-what-subtitle,
+  .about-why-subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .about-who-image-wrap {
+    width: 100%;
+    max-width: 539px;
+    height: auto;
+    aspect-ratio: 539 / 540;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+
+  .about-why-image-wrap {
+    width: 100%;
+    max-width: 571px;
+    height: auto;
+    aspect-ratio: 571 / 483;
+    border-radius: 16px;
+    margin: 0 auto;
+  }
+
+  .about-cards-grid {
+    gap: 16px;
+    padding: 10px 4px 16px;
+  }
+
+  .about-card {
+    flex: 0 0 calc(100% - 30px);
+    max-width: 320px;
+    width: auto;
+    min-height: 310px;
+    height: auto;
+    scroll-snap-align: center;
+  }
+
+  .about-card-title {
+    font-size: 22px;
+  }
+
+  .about-card-desc {
+    font-size: 14.5px;
+  }
+
+  .about-why-content {
+    gap: 20px;
+  }
+
+  .about-why-list {
+    gap: 18px;
+  }
+
+  .about-why-item {
+    gap: 12px;
+  }
+
+  .about-why-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .about-why-label {
+    font-size: 19px;
+  }
+}
+
+/* Small Mobile (max-width: 420px) */
+@media (max-width: 420px) {
+  .about-section-heading {
+    font-size: 24px;
+  }
+
+  .about-who-text,
+  .about-what-subtitle,
+  .about-why-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .about-card {
+    flex: 0 0 calc(100% - 20px);
+    max-width: 280px;
+    padding: 22px 14px;
+  }
+
+  .about-card-title {
+    font-size: 20px;
+  }
+
+  .about-why-label {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,586 @@
+/* ==========================================================================
+   Check Usage Page Styles - Eazy Communications
+   Figma Node: 189:1199
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Check Usage Main Section & Container
+   -------------------------------------------------------------------------- */
+.check-usage-section {
+  width: 100%;
+  padding: 60px 0 100px;
+  background-color: #ffffff;
+}
+
+.check-usage-container {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Headings & Informational Text
+   -------------------------------------------------------------------------- */
+.check-usage-header {
+  margin-bottom: 55px;
+  max-width: 800px;
+}
+
+.check-usage-main-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  line-height: 1.2;
+  color: #373737;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+}
+
+.check-usage-lead {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #373737;
+  margin: 0 0 45px 0;
+}
+
+.check-usage-prompt {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #373737;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Check Usage Form Card (Cyan Tinted Container)
+   -------------------------------------------------------------------------- */
+.check-usage-card {
+  width: 100%;
+  max-width: 100%;
+  background-color: rgba(0, 174, 239, 0.1);
+  border: 1px solid #00aeef;
+  border-radius: 30px;
+  padding: 50px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.check-usage-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Input Fields
+   -------------------------------------------------------------------------- */
+.check-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.check-input-group.order-group {
+  flex: 0 0 226px;
+  width: 226px;
+}
+
+.check-input-group.email-group {
+  flex: 1 1 602px;
+  max-width: 602px;
+}
+
+.check-input-control {
+  width: 100%;
+  height: 56px;
+  background-color: #ffffff;
+  border: 1px solid #00aeef;
+  border-radius: 200px;
+  box-sizing: border-box;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 16px;
+  font-weight: 300;
+  color: #373737;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.check-input-control::placeholder {
+  color: rgba(55, 55, 55, 0.6);
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-weight: 300;
+}
+
+.check-input-control:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.25);
+}
+
+.order-group .check-input-control {
+  padding: 0 46px 0 24px;
+}
+
+.email-group .check-input-control {
+  padding: 0 24px;
+}
+
+.check-input-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-input-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Check Button CTA
+   -------------------------------------------------------------------------- */
+.check-submit-btn {
+  flex: 0 0 252px;
+  width: 252px;
+  height: 56px;
+  border: none;
+  border-radius: 200px;
+  background: linear-gradient(180deg, #2868b2 0%, #0094d1 100%);
+  box-shadow: 0px 5px 10px rgba(49, 49, 49, 0.05);
+  color: #ffffff;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.check-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 8px 16px rgba(0, 148, 209, 0.25);
+  opacity: 0.95;
+}
+
+.check-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Form Feedback & Error Messages
+   -------------------------------------------------------------------------- */
+.check-form-message {
+  margin-top: 16px;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 14px;
+  display: none;
+  text-align: center;
+}
+
+.check-form-message.error {
+  display: block;
+  color: #e53935;
+}
+
+.check-form-message.success {
+  display: block;
+  color: #00875a;
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Usage Result Card (Revealed upon Check)
+   -------------------------------------------------------------------------- */
+.check-result-card {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(61, 61, 61, 0.12);
+  border-radius: 20px;
+  padding: 36px 40px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  margin-top: 20px;
+  animation: fadeInResult 0.4s ease forwards;
+}
+
+@keyframes fadeInResult {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.check-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(61, 61, 61, 0.1);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.check-result-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 24px;
+  color: #373737;
+  margin: 0;
+}
+
+.check-result-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.check-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.check-result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.check-result-label {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 13px;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.check-result-value {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 18px;
+  color: #121212;
+  font-weight: 400;
+}
+
+.check-progress-wrapper {
+  margin-bottom: 20px;
+}
+
+.check-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.check-progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.check-progress-fill {
+  height: 100%;
+  width: 38%;
+  background: linear-gradient(90deg, #00aeef 0%, #0077b6 100%);
+  border-radius: 10px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .check-usage-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .check-usage-card {
+    padding: 36px 30px;
+  }
+
+  .check-input-group.order-group {
+    flex: 0 0 180px;
+    width: 180px;
+  }
+
+  .check-input-group.email-group {
+    flex: 1 1 auto;
+  }
+
+  .check-submit-btn {
+    flex: 0 0 180px;
+    width: 180px;
+  }
+
+  .check-result-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .check-usage-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .check-usage-card {
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+
+  .check-usage-main-title {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+
+  .check-usage-header {
+    margin-bottom: 35px;
+  }
+
+  .check-usage-lead {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .check-usage-prompt {
+    font-size: 16px;
+  }
+
+  .check-usage-form {
+    gap: 10px;
+  }
+
+  .check-input-group.order-group {
+    flex: 0 0 160px;
+    width: 160px;
+  }
+
+  .check-submit-btn {
+    flex: 0 0 160px;
+    width: 160px;
+  }
+
+  .check-input-control,
+  .check-submit-btn {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .check-input-icon {
+    width: 22px;
+    height: 22px;
+    right: 14px;
+  }
+
+  .check-input-icon img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .check-usage-section {
+    padding: 35px 0 50px;
+  }
+
+  .check-usage-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .check-usage-header {
+    margin-bottom: 24px;
+  }
+
+  .check-usage-main-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .check-usage-lead {
+    font-size: 15px;
+    margin-bottom: 18px;
+    line-height: 1.45;
+  }
+
+  .check-usage-prompt {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  /* Form transitions to clean stacked layout */
+  .check-usage-card {
+    padding: 18px 16px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+  }
+
+  .check-usage-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .check-input-group.order-group,
+  .check-input-group.email-group,
+  .check-submit-btn {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .check-input-control {
+    height: 46px;
+    font-size: 14px;
+    padding: 0 18px;
+    border-radius: 100px;
+  }
+
+  .order-group .check-input-control {
+    padding: 0 42px 0 18px;
+  }
+
+  .check-input-icon {
+    width: 20px;
+    height: 20px;
+    right: 15px;
+  }
+
+  .check-input-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .check-submit-btn {
+    height: 46px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 100px;
+  }
+
+  .check-result-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .check-result-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .check-usage-section {
+    padding: 28px 0 45px;
+  }
+
+  .check-usage-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .check-usage-main-title {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .check-usage-lead {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .check-usage-prompt {
+    font-size: 14px;
+  }
+
+  .check-usage-card {
+    padding: 15px 13px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+  }
+
+  .check-usage-form {
+    gap: 10px;
+  }
+
+  .check-input-control {
+    height: 44px;
+    font-size: 13.5px;
+    padding: 0 16px;
+  }
+
+  .order-group .check-input-control {
+    padding: 0 38px 0 16px;
+  }
+
+  .check-input-icon {
+    width: 18px;
+    height: 18px;
+    right: 14px;
+  }
+
+  .check-input-icon img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .check-submit-btn {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .check-result-card {
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+
+  .check-result-title {
+    font-size: 18px;
+  }
+
+  .check-result-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .check-result-value {
+    font-size: 15px;
+  }
+
+  .check-result-label {
+    font-size: 11px;
+  }
+}
+

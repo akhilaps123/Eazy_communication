@@ -1,0 +1,1478 @@
+/* ==========================================================================
+   Japan eSIM Product Detail Page Stylesheet
+   Faithful to Figma Node 159:74 & Global Design Tokens
+   ========================================================================== */
+
+/* Page Base */
+.japan-page {
+  background-color: var(--color-white, #ffffff);
+  color: var(--color-gray-dark, #373737);
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.japan-container {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1279px) {
+  .japan-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ==========================================================================
+   Custom Header Actions for Japan Detail Page
+   (Matches Figma Node 196:343 / 196:351: Cart Icon + Profile Pill)
+   ========================================================================== */
+.header-actions-custom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+  transition: transform var(--transition-fast, 0.2s);
+}
+
+.header-cart-btn:hover {
+  transform: scale(1.08);
+}
+
+.header-avatar-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: linear-gradient(270deg, #c4e7ff 0%, #f3f5f7 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 174, 239, 0.12);
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-avatar-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 174, 239, 0.22);
+}
+
+.header-avatar-img {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Product Configuration & Hero Details (2-Column Layout)
+   Figma Node 165:183 - pt: 60px, pb: 100px, gap: 72px, items-center
+   ========================================================================== */
+.product-config-section {
+  padding: 60px 0 100px;
+  background-color: var(--color-white, #ffffff);
+}
+
+.product-config-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 72px;
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* --- Left Column: Info & Trip Start Date (543px) --- */
+.product-info-col {
+  width: 543px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-main-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-gray-dark, #373737);
+  margin: 0 0 17px 0;
+}
+
+.product-rating-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.rating-stars img {
+  width: 27.36px;
+  height: 27.36px;
+  display: block;
+}
+
+.reviews-link {
+  color: var(--primary-cyan, #00aeef);
+  font-family: var(--font-meta, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.684px;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: opacity var(--transition-fast, 0.2s);
+}
+
+.reviews-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+.product-lead-text {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--color-gray-dark, #373737);
+  margin: 0 0 60px 0;
+  max-width: 543px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Trip Start Date Box (525px x 200px, rounded 22.78px) */
+.trip-start-card {
+  max-width: 525px;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  box-sizing: border-box;
+  background: rgba(0, 174, 239, 0.1);
+  border: 1px solid var(--primary-cyan, #00aeef);
+  border-radius: 22.78px;
+  padding: 21px 83px 28px 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 21px;
+}
+
+.trip-start-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-black, #000000);
+  margin: 0;
+}
+
+.trip-start-desc {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--color-gray-dark, #373737);
+  margin: 0;
+}
+
+.trip-date-input-wrap {
+  position: relative;
+  width: 226px;
+  height: 42px;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--primary-cyan, #00aeef);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.trip-date-input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 0 42px 0 16px;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--color-gray-dark, #373737);
+  outline: none;
+  cursor: pointer;
+  line-height: 42px;
+}
+
+.trip-date-input-wrap:focus-within {
+  box-shadow: 0 0 0 3px rgba(0, 174, 239, 0.25);
+}
+
+.trip-date-icon {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  pointer-events: auto;
+  cursor: pointer;
+  display: block;
+  transition: opacity var(--transition-fast, 0.2s ease);
+}
+
+.trip-date-icon:hover {
+  opacity: 0.8;
+}
+
+/* --- Interactive Calendar Popover --- */
+.calendar-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 288px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 174, 239, 0.25);
+  padding: 16px;
+  z-index: 100;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  display: none;
+  animation: calFadeIn 0.18s ease-out;
+  user-select: none;
+}
+
+.calendar-popover.active {
+  display: block;
+}
+
+@keyframes calFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cal-month-year {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-gray-dark, #373737);
+  letter-spacing: -0.2px;
+}
+
+.cal-nav-btn {
+  background: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-cyan, #00aeef);
+  transition: background 0.15s ease, transform 0.15s ease;
+  font-size: 15px;
+  padding: 0;
+}
+
+.cal-nav-btn:hover {
+  background: rgba(0, 174, 239, 0.12);
+  transform: scale(1.1);
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cal-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--color-gray-dark, #373737);
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.cal-day:hover:not(.empty):not(.disabled) {
+  background: rgba(0, 174, 239, 0.12);
+  color: #00aeef;
+}
+
+.cal-day.selected {
+  background: linear-gradient(135deg, #00aeef, #0084c7) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 174, 239, 0.4);
+}
+
+.cal-day.today:not(.selected) {
+  border: 1.5px solid #00aeef;
+  font-weight: 600;
+  color: #00aeef;
+}
+
+.cal-day.other-month {
+  color: #c5c5c5;
+}
+
+.cal-day.empty {
+  cursor: default;
+}
+
+/* --- Right Column: Plan Configurator & Cards (602px) --- */
+.product-config-col {
+  max-width: 602.13px;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+/* Unlimited / Fixed Toggle Pill (602px x 60px, rounded 50px) */
+.data-type-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  background: var(--bg-pill-subtle, linear-gradient(90deg, #f3f5f7 0%, #c4e7ff 100%));
+  border-radius: 50px;
+  padding: 6px 10px;
+  gap: 10px;
+  margin: 0;
+}
+
+.toggle-tab-btn {
+  width: 286px;
+  height: 48px;
+  border-radius: 28px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--color-gray-dark, #373737);
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 30px;
+}
+
+.toggle-tab-btn.active {
+  background: var(--primary-gradient-horizontal, linear-gradient(90deg, #2868b2 0%, #0094d1 100%));
+  color: var(--color-white, #ffffff);
+  font-weight: 300;
+  box-shadow: 0px 3px 8px rgba(0, 148, 209, 0.25);
+}
+
+/* 2x2 Plan Cards Grid (width 602px, cards 296px x 114px) */
+.plan-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 296.1px);
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+.plan-card {
+  width: 296.1px;
+  height: 113.88px;
+  box-sizing: border-box;
+  background: var(--color-white, #ffffff);
+  border: 1.14px solid rgba(0, 0, 0, 0.1);
+  border-radius: 22.78px;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s);
+  position: relative;
+  user-select: none;
+}
+
+.plan-card:hover {
+  border-color: var(--primary-cyan, #00aeef);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 174, 239, 0.1);
+}
+
+.plan-card.selected {
+  background: rgba(0, 174, 239, 0.1);
+  border-color: var(--primary-cyan, #00aeef);
+  box-shadow: 0 4px 16px rgba(0, 174, 239, 0.15);
+}
+
+/* Radio Icon inside Card */
+.plan-radio-wrap {
+  position: absolute;
+  left: 25.05px;
+  top: 29.22px;
+  width: 18.22px;
+  height: 18.22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.plan-radio-icon {
+  width: 18.22px;
+  height: 18.22px;
+  display: block;
+}
+
+.plan-card-body {
+  position: absolute;
+  left: 63.9px;
+  top: 23.52px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 0;
+}
+
+.plan-card-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 22.78px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-gray-dark, #373737);
+  margin: 0 0 5px 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.plan-card-prices {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: left;
+  margin: 0;
+}
+
+.plan-price-active {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 22.78px;
+  font-weight: 500;
+  color: #e63946;
+  line-height: 1.3;
+}
+
+.plan-price-crossed {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 22.78px;
+  font-weight: 300;
+  color: var(--color-gray-dark, #373737);
+  text-decoration: line-through;
+  line-height: 1.3;
+}
+
+/* Add to Cart Button (Matching Figma Node 164:2395 & global .btn-primary) */
+.btn-add-cart {
+  width: 100%;
+  height: 56px;
+  background: var(--primary-gradient, linear-gradient(180deg, #2868b2 0%, #0094d1 100%)) !important;
+  color: var(--color-white, #ffffff) !important;
+  border: none;
+  border-radius: 200px !important;
+  font-family: var(--font-heading, 'Questrial', sans-serif) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  cursor: pointer;
+  transition: transform var(--transition-fast, 0.2s), box-shadow var(--transition-fast, 0.2s);
+  box-shadow: 0px 5px 10px rgba(49, 49, 49, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 16px 24px;
+}
+
+.btn-add-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 148, 209, 0.35);
+}
+
+.btn-add-cart:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   4. "What Does Japan eSIM Include?" Section
+   Figma Node 165:184 - padding 0 0 100px 0, gap 60px
+   ========================================================================== */
+.specs-section {
+  padding: 0 0 100px;
+  background-color: var(--color-white, #ffffff);
+  text-align: center;
+}
+
+.specs-section .section-heading {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-gray-dark, #373737);
+  margin: 0 0 25px 0;
+}
+
+.specs-section .section-subtitle {
+  max-width: 976px;
+  margin: 0 auto 25px auto;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--color-gray-dark, #373737);
+}
+
+/* Navigation Tabs Bar (554px x 60px, rounded 50px) */
+.specs-tabs-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-pill-subtle, linear-gradient(90deg, #f3f5f7 0%, #c4e7ff 100%));
+  border-radius: 50px;
+  padding: 0 50px;
+  margin: 0 auto 60px auto;
+  width: 554px;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.spec-tab-btn {
+  height: 48px;
+  border-radius: 28px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(55, 55, 55, 0.7);
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.spec-tab-btn:hover {
+  color: var(--color-gray-dark, #373737);
+}
+
+.spec-tab-btn.active {
+  background: var(--primary-gradient-horizontal, linear-gradient(90deg, #2868b2 0%, #0094d1 100%));
+  color: var(--color-white, #ffffff);
+  box-shadow: 0px 3px 8px rgba(0, 148, 209, 0.25);
+  padding: 8px 30px;
+  font-weight: 300;
+}
+
+/* Specs Details Card Table (796px x 285px, rounded 22.78px) */
+.specs-table-card {
+  max-width: 796px;
+  width: 100%;
+  min-height: 285px;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: rgba(0, 174, 239, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 22.78px;
+  padding: 29px 38px 28px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.specs-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.specs-table-row:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-gray-dark, #373737);
+  white-space: nowrap;
+}
+
+.spec-value {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray-dark, #373737);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   5. "Full product information" Section
+   Figma Node 165:185 - padding 0 0 100px, gap 25px
+   ========================================================================== */
+.product-details-section {
+  padding: 0 0 100px;
+  background-color: var(--color-white, #ffffff);
+  text-align: center;
+}
+
+.product-details-section .section-heading {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-gray-dark, #373737);
+  margin: 0 0 25px 0;
+}
+
+.product-details-list {
+  max-width: 976px;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.product-details-list li {
+  position: relative;
+  padding-left: 24px;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-gray-dark, #373737);
+  line-height: 2.5;
+  margin-bottom: 0;
+}
+
+.product-details-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 22.5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-gray-dark, #373737);
+}
+
+/* ==========================================================================
+   6. Testimonials Section ("Trusted by Travelers Worldwide")
+   Figma Node 159:159 - padding 0 0 100px
+   ========================================================================== */
+.testimonials-section {
+  width: 100%;
+  padding: 0 0 100px;
+  background-color: var(--color-white, #ffffff);
+  overflow: hidden;
+}
+
+.testimonials-section .section-title-wrap {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 60px;
+}
+
+.testimonials-section .section-heading {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-gray-dark, #373737);
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+}
+
+.testimonials-section .section-subtitle {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--color-gray-dark, #373737);
+  margin: 0;
+}
+
+.testimonials-track-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonials-row {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.testimonials-row-1 {
+  animation: scrollTestimonialsLeft 42s linear infinite;
+}
+
+.testimonials-row-2 {
+  animation: scrollTestimonialsRight 46s linear infinite;
+}
+
+.testimonials-track-container:hover .testimonials-row {
+  animation-play-state: paused;
+}
+
+.testimonials-group {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.testimonial-card {
+  width: 379px;
+  background: var(--color-white, #ffffff);
+  border: 1px solid var(--border-card, #efefef);
+  border-radius: 12px;
+  padding: 28px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.testimonial-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-user-meta h4 {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-gray-dark, #373737);
+  line-height: 1.2;
+}
+
+.testimonial-user-meta p {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 13px;
+  color: #888888;
+  line-height: 1.2;
+}
+
+.testimonial-quote-text {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #555555;
+}
+
+.testimonial-quote-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  opacity: 0.85;
+}
+
+@keyframes scrollTestimonialsLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollTestimonialsRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ==========================================================================
+   7. "Got Questions? We’ve Got Answers" FAQ Accordion Section
+   Figma Node 173:100 - padding 100px 0
+   ========================================================================== */
+/* ==========================================================================
+   7. "Got Questions? We’ve Got Answers" FAQ Accordion Section
+   Figma Node 173:100 - padding 0 0 100px, gap 60px
+   ========================================================================== */
+.faq-accordion-section {
+  padding: 0 0 100px;
+  background-color: var(--color-white, #ffffff);
+}
+
+.faq-header {
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto 60px;
+}
+
+.faq-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: -0.8px;
+  color: var(--color-gray-dark, #373737);
+  margin: 0 0 25px 0;
+}
+
+.faq-subtitle {
+  font-family: 'Manrope', var(--font-body), sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #3d3d3d;
+  max-width: 732px;
+  margin: 0 auto;
+}
+
+/* Accordion Container (1025px max-width) */
+.faq-accordion-list {
+  max-width: 1025px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 24px 0;
+  transition: all var(--transition-fast, 0.2s);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-gray-dark, #373737);
+  transition: color var(--transition-fast, 0.2s);
+}
+
+.faq-chevron {
+  width: 14px;
+  height: 8px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq-item.active .faq-content {
+  grid-template-rows: 1fr;
+}
+
+.faq-inner-body {
+  max-width: 970px;
+  min-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.35s ease, padding-top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-sizing: border-box;
+}
+
+.faq-item.active .faq-inner-body {
+  padding-top: 25px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease 0.08s, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), padding-top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq-inner-body p {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #3d3d3d;
+  margin: 0 0 16px 0;
+}
+
+.faq-inner-body p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-inner-body p strong {
+  font-weight: 400;
+  color: #3d3d3d;
+}
+
+.faq-important-paragraph {
+  margin-top: 24px;
+}
+
+/* Toast message for Add to Cart */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #1b2538;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1260px) {
+  .product-config-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .product-info-col,
+  .product-config-col {
+    width: 100%;
+    max-width: 602px;
+  }
+
+  .trip-start-card {
+    width: 100%;
+    max-width: 602px;
+  }
+
+  .specs-table-card {
+    width: 100%;
+    max-width: 796px;
+    padding: 24px 30px;
+  }
+
+  .spec-label {
+    white-space: normal;
+    flex-shrink: 0;
+    max-width: 45%;
+  }
+
+  .spec-value {
+    white-space: normal;
+    text-align: right;
+    word-break: break-word;
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .japan-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header-actions-custom {
+    gap: 12px;
+  }
+
+  .product-config-section {
+    padding: 30px 0 60px;
+  }
+
+  .product-main-title {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .product-rating-row {
+    margin-bottom: 14px;
+  }
+
+  .rating-stars img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .reviews-link {
+    font-size: 16px;
+  }
+
+  .product-lead-text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    max-width: 100%;
+  }
+
+  .trip-start-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 20px;
+    gap: 14px;
+    border-radius: 18px;
+  }
+
+  .trip-start-title {
+    font-size: 18px;
+  }
+
+  .trip-start-desc {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .trip-date-input-wrap {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .product-config-col {
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .data-type-toggle {
+    width: 100%;
+    height: 52px;
+    padding: 4px;
+    border-radius: 50px;
+    display: flex;
+    gap: 6px;
+  }
+
+  .toggle-tab-btn {
+    flex: 1;
+    width: auto;
+    height: 44px;
+    padding: 0 10px;
+    font-size: 14px;
+    border-radius: 26px;
+    white-space: nowrap;
+  }
+
+  .plan-cards-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .plan-card {
+    width: 100%;
+    min-height: 96px;
+    height: auto;
+    border-radius: 18px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+  }
+
+  .plan-radio-wrap {
+    position: static;
+    left: auto;
+    top: auto;
+    flex-shrink: 0;
+  }
+
+  .plan-card-body {
+    position: static;
+    left: auto;
+    top: auto;
+  }
+
+  .plan-card-title {
+    font-size: 17px;
+  }
+
+  .plan-price-current {
+    font-size: 20px;
+  }
+
+  .plan-price-original {
+    font-size: 15px;
+  }
+
+  .btn-add-cart {
+    height: 54px;
+    font-size: 16px;
+  }
+
+  /* 4. What Does Japan eSIM Include Section */
+  .specs-section {
+    padding: 0 0 60px;
+  }
+
+  .specs-section .section-heading,
+  .product-details-section .section-heading,
+  .testimonials-section .section-heading,
+  .faq-title {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .specs-section .section-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    padding: 0 4px;
+  }
+
+  .specs-tabs-wrap {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 0 auto 28px;
+  }
+
+  .spec-tab-btn {
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 0 8px;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .spec-tab-btn.active {
+    padding: 0 8px;
+  }
+
+  .specs-table-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 16px 18px;
+    border-radius: 18px;
+    gap: 0;
+  }
+
+  .specs-table-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 0;
+    gap: 12px;
+    flex: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .spec-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #373737;
+    white-space: normal;
+    flex-shrink: 0;
+    max-width: 42%;
+    line-height: 1.35;
+  }
+
+  .spec-value {
+    font-size: 14px;
+    font-weight: 400;
+    color: #373737;
+    text-align: right;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.35;
+    flex: 1;
+  }
+
+  /* 5. Full product information */
+  .product-details-section {
+    padding: 0 0 60px;
+  }
+
+  .product-details-list {
+    padding: 0 4px;
+  }
+
+  .product-details-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    padding-left: 20px;
+    margin-bottom: 14px;
+  }
+
+  .product-details-list li::before {
+    top: 8px;
+    left: 2px;
+  }
+
+  /* 6. Testimonials */
+  .testimonials-section {
+    padding: 0 0 60px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .testimonials-section .section-title-wrap {
+    margin-bottom: 24px;
+    padding: 0 4px;
+  }
+
+  .testimonials-section .section-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .testimonials-track-container {
+    margin-top: 20px;
+    gap: 16px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .testimonial-card {
+    width: 270px;
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .testimonial-quote-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* 7. FAQ Section */
+  .faq-accordion-section {
+    padding: 0 0 60px;
+  }
+
+  .faq-header {
+    margin-bottom: 24px;
+    padding: 0 4px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .faq-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .faq-accordion-list {
+    padding: 0 4px;
+  }
+
+  .faq-item {
+    padding: 16px 0;
+  }
+
+  .faq-trigger {
+    font-size: 16px;
+    line-height: 1.4;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .faq-trigger span {
+    font-size: 16px;
+    line-height: 1.4;
+    flex: 1;
+    text-align: left;
+  }
+
+  .faq-chevron {
+    width: 12px;
+    height: 7px;
+    margin-top: 5px;
+  }
+
+  .faq-inner-body p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .faq-item.active .faq-inner-body {
+    padding-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .japan-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .faq-title,
+  .specs-section .section-heading,
+  .product-details-section .section-heading,
+  .testimonials-section .section-heading {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .faq-trigger {
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .faq-trigger span {
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .faq-inner-body p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .specs-table-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .spec-label {
+    max-width: 100%;
+    font-weight: 500;
+  }
+
+  .spec-value {
+    text-align: left;
+    color: #555555;
+  }
+
+  .toggle-tab-btn {
+    font-size: 13px;
+    padding: 0 6px;
+  }
+
+  .spec-tab-btn {
+    font-size: 13px;
+  }
+}

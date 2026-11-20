@@ -1,0 +1,1235 @@
+/* ==========================================================================
+   New eSIM Page Stylesheet - Eazy Communications
+   Faithfully designed matching Figma node 92:1290
+   ========================================================================== */
+
+/* Page Base */
+.new-esim-page {
+  min-height: 100vh;
+  background-color: var(--color-white, #ffffff);
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Active State for Header Navigation */
+.header-nav-link.active {
+  color: var(--primary-cyan, #00aeef);
+  position: relative;
+}
+
+.header-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-cyan, #00aeef);
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Banner (Figma Node 132:265 - 1440px x 273px)
+   -------------------------------------------------------------------------- */
+.new-esim-banner {
+  width: 100%;
+  height: 273px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b333a;
+}
+
+.new-esim-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.new-esim-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.new-esim-banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.new-esim-banner-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--color-white, #ffffff);
+  letter-spacing: -0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumbs Navigation (Figma Node 104:35 - Height: 52px)
+   -------------------------------------------------------------------------- */
+.breadcrumbs-section {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #fafafa;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: rgba(103, 103, 103, 0.5);
+}
+
+.breadcrumbs-list a {
+  color: rgba(103, 103, 103, 0.5);
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.breadcrumbs-list a:hover {
+  color: rgba(103, 103, 103, 0.9);
+}
+
+.breadcrumbs-sep {
+  color: rgba(103, 103, 103, 0.5);
+}
+
+.breadcrumbs-current {
+  color: rgba(103, 103, 103, 0.5);
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   Filter & Sorting Toolbar (Figma Node 132:266 - Height ~190px)
+   -------------------------------------------------------------------------- */
+.filter-toolbar-section {
+  width: 100%;
+  padding: 32px 0 20px;
+  background-color: #ffffff;
+}
+
+.filter-toolbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto 24px auto;
+}
+
+.plans-counter {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-gray-dark, #373737);
+  font-weight: 400;
+}
+
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sort-label {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-gray-dark, #373737);
+  font-weight: 400;
+}
+
+.sort-select-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.55px;
+  width: 189.79px;
+  height: 55.43px;
+  padding: 0 20px;
+  border: 0.936px solid rgba(0, 0, 0, 0.1);
+  border-radius: 187px;
+  background: #ffffff;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 13.1px;
+  line-height: 1.4;
+  letter-spacing: 1.31px;
+  text-transform: uppercase;
+  color: var(--color-gray-dark, #373737);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.sort-select-btn:hover {
+  border-color: var(--primary-bright, #0094d1);
+  box-shadow: 0 2px 8px rgba(0, 148, 209, 0.1);
+}
+
+.sort-caret {
+  width: 12px;
+  height: 7px;
+  transition: transform 0.2s ease;
+}
+
+/* Filter Pills Row - Full Width of Container (86.11%) matching Figma Node 107:445 */
+.filter-pills-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.filter-pills-row .filter-dropdown {
+  flex-shrink: 0;
+}
+
+/* Exact Figma Widths for the 7 Filter Options */
+.filter-pills-row .filter-dropdown[data-filter-type="destination"] {
+  width: 245.79px;
+}
+
+.filter-pills-row .filter-dropdown[data-filter-type="coverage"] {
+  width: 196.79px;
+}
+
+.filter-pills-row .filter-dropdown[data-filter-type="data"] {
+  width: 104.79px;
+}
+
+.filter-pills-row .filter-dropdown[data-filter-type="validity"] {
+  width: 139.79px;
+}
+
+.filter-pills-row .filter-dropdown[data-filter-type="price"] {
+  width: 118.79px;
+}
+
+.filter-pills-row .filter-dropdown[data-filter-type="speed"] {
+  width: 200.79px;
+}
+
+.filter-pills-row .filter-dropdown[data-filter-type="features"] {
+  width: 150.79px;
+}
+
+.filter-pill {
+  width: 100%;
+  height: 55.43px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.55px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 0.936px solid rgba(0, 0, 0, 0.1);
+  border-radius: 187px;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 13.1px;
+  line-height: 1.4;
+  letter-spacing: 1.31px;
+  text-transform: uppercase;
+  color: var(--color-gray-dark, #373737);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.filter-pill:hover {
+  border-color: var(--primary-bright, #0094d1);
+  color: var(--primary-bright, #0094d1);
+  background: #fbfdff;
+}
+
+.filter-pill.active {
+  background: var(--primary-gradient, linear-gradient(135deg, #2868b2 0%, #0094d1 100%));
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 148, 209, 0.2);
+}
+
+.filter-pill.active .pill-caret path {
+  stroke: #ffffff;
+}
+
+.pill-caret {
+  width: 12px;
+  height: 7px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.filter-pill:hover .pill-caret {
+  transform: translateY(1px);
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Dropdown Menus for Sort and Filter Pills
+   -------------------------------------------------------------------------- */
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-dropdown.open .sort-caret,
+.filter-dropdown.open .pill-caret {
+  transform: rotate(180deg) !important;
+}
+
+.filter-dropdown.open .sort-select-btn,
+.filter-dropdown.open .filter-pill {
+  border-color: var(--primary-bright, #0094d1);
+  box-shadow: 0 0 0 3px rgba(0, 148, 209, 0.12);
+}
+
+.filter-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  max-height: 280px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  z-index: 100;
+  display: none;
+  list-style: none;
+  animation: dropdownFadeIn 0.18s ease-out forwards;
+}
+
+/* Custom scrollbar for dropdown menus */
+.filter-dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.filter-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #dddddd;
+  border-radius: 4px;
+}
+
+.sort-wrapper .filter-dropdown .filter-dropdown-menu,
+.filter-pills-row .filter-dropdown[data-filter-type="speed"] .filter-dropdown-menu,
+.filter-pills-row .filter-dropdown[data-filter-type="features"] .filter-dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.filter-dropdown.open .filter-dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 10px 18px;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 13px;
+  color: var(--color-gray-dark, #373737);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-item:hover {
+  background: #f4f9fd;
+  color: var(--primary-bright, #0094d1);
+}
+
+.dropdown-item.active {
+  background: #f0f7fc;
+  color: var(--primary-bright, #0094d1);
+  font-weight: 500;
+}
+
+.dropdown-item.active::after {
+  content: '✓';
+  color: var(--primary-bright, #0094d1);
+  font-weight: bold;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   eSIM Catalog Grid (Figma Node 159:2270 - 12 Cards Grid)
+   -------------------------------------------------------------------------- */
+.esim-catalog-section {
+  width: 100%;
+  padding: 24px 0 70px;
+  background-color: #ffffff;
+}
+
+.esim-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 290px);
+  justify-content: space-between;
+  row-gap: 28px;
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Reusable .offer-card Styling - Exactly matching Figma Node 159:2204 (290px x 333px, rounded 20px, 10px padding) */
+.esim-catalog-grid .offer-card {
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 333px;
+}
+
+.esim-catalog-grid .offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #dddddd;
+}
+
+.offer-card-media {
+  position: relative;
+  width: 100%;
+  height: 164px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 10px 10px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.offer-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.65) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.offer-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.offer-card:hover .offer-photo {
+  transform: scale(1.04);
+}
+
+.offer-card-badge {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.badge-popular {
+  background-color: #0551d3;
+  color: #ffffff;
+}
+
+.badge-best-seller {
+  background-color: #16ad70;
+  color: #ffffff;
+}
+
+.badge-best-value {
+  background-color: #e35d25;
+  color: #ffffff;
+}
+
+.offer-card-country {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.offer-card-country img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.offer-card-rating {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  font-family: var(--font-meta, 'Inter', sans-serif);
+  font-size: 13.4px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.offer-card-rating img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.offer-card-body {
+  padding: 12px 2px 4px 2px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.offer-provider-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.provider-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.provider-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.provider-details h5 {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 15.5px;
+  font-weight: 400;
+  color: var(--color-gray-dark, #373737);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.provider-details p {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 13.3px;
+  font-weight: 300;
+  color: rgba(55, 55, 55, 0.5);
+  line-height: 1.2;
+  margin: 2px 0 0 0;
+}
+
+.icon-5g {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Price Row - Exact Figma Colors: #373737 'From', Cyan #00aeef Price, Light Cyan 50% Strikethrough */
+.offer-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 10px 0 14px 0;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+}
+
+.price-from {
+  font-size: 16px;
+  color: #373737;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.price-current {
+  font-size: 20px;
+  font-weight: 500;
+  color: #00aeef;
+  line-height: 1.2;
+}
+
+.price-original {
+  font-size: 16px;
+  color: rgba(0, 174, 239, 0.5);
+  text-decoration: line-through;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Action Buttons - Exact Figma dimensions (123px x 32px, rounded 999px) */
+.offer-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.offer-card-actions .btn {
+  flex: 1;
+  height: 32px;
+  border-radius: 999px;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 10px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.offer-card-actions .btn-outline {
+  background: #ffffff;
+  border: 1px solid #00aeef;
+  color: #00aeef;
+  box-shadow: 0px 2.86px 11.44px rgba(49, 49, 49, 0.05);
+}
+
+.offer-card-actions .btn-outline:hover {
+  background: #f0f9fd;
+  border-color: #0094d1;
+  color: #0094d1;
+}
+
+.offer-card-actions .btn-primary {
+  background: linear-gradient(180deg, #2868b2 0%, #0094d1 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0px 2.86px 5.72px rgba(49, 49, 49, 0.05);
+}
+
+.offer-card-actions .btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 12px rgba(40, 104, 178, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Compare Popular Plans (Figma Node 130:75 - Height 547px)
+   -------------------------------------------------------------------------- */
+.comparison-section {
+  width: 100%;
+  padding: 60px 0 70px;
+  background-color: #ffffff;
+}
+
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 28px;
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comparison-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: -0.01em;
+}
+
+.comparison-link {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 18px;
+  color: #00aeef;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.comparison-link:hover {
+  opacity: 0.8;
+}
+
+.comparison-table-wrapper {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.comparison-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 860px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child {
+  border-right: none;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Header Row (Figma bg-[#f8f9fa], height 92px) */
+.comparison-table thead tr th {
+  height: 92px;
+  padding: 16px 20px;
+  background-color: #f8f9fa;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  width: 20%;
+}
+
+.comparison-table thead tr th.col-label {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #f8f9fa;
+}
+
+.comparison-plan-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+
+.comparison-plan-sub {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.2;
+}
+
+/* All Body Rows (Figma bg-white, height 54px) */
+.comparison-table tbody tr td {
+  height: 54px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* First Column: Labels - Clean White Background matching Figma */
+.comparison-table tbody tr td.col-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.comparison-table tbody tr:hover td {
+  background-color: #fcfcfc;
+}
+
+/* Action Row (Figma height 68px, bg-white) */
+.comparison-table tr.row-action td {
+  height: 68px;
+  padding: 16px 20px;
+  background-color: #ffffff;
+}
+
+.btn-table-buy {
+  width: 123px;
+  height: 32px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2868b2 0%, #0094d1 100%);
+  color: #ffffff;
+  border: none;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 10px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2.86px 5.72px rgba(49, 49, 49, 0.05);
+}
+
+.btn-table-buy:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 12px rgba(40, 104, 178, 0.25);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   Best Sellers Slider (Figma Node 130:77 - Height 275px, full right width bleed)
+   -------------------------------------------------------------------------- */
+.bestsellers-section {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: var(--container-gap, 6.944%);
+  padding-right: 0 !important;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.bestsellers-header {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.bestsellers-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 30px;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Manual Pointer Drag & Touch Scroll Track - Bleeds all the way to right edge with 23px gap */
+.bestsellers-slider {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: var(--container-gap, 6.944%);
+  padding-bottom: 16px;
+  cursor: grab;
+  cursor: -webkit-grab;
+  user-select: none;
+}
+
+.bestsellers-slider::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.bestsellers-slider.grabbing {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.bestsellers-slider.grabbing * {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  user-select: none;
+}
+
+/* Exact Figma Card: 277px x 104px, rounded 16px, border 1px solid rgba(0,0,0,0.1) */
+.bestseller-card {
+  width: 277px;
+  height: 104px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.bestseller-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Exact Figma Thumbnail: 99px x 104px */
+.bestseller-thumb {
+  width: 99px;
+  height: 104px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  display: block;
+}
+
+.bestseller-info {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.bestseller-name {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.bestseller-price {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(55, 55, 55, 0.5);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Testimonials Section ("Trusted by Travelers Worldwide")
+   (Faithfully reusing index.html structure & home.css classes)
+   -------------------------------------------------------------------------- */
+.testimonials-section {
+  width: 100%;
+  padding: 70px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.testimonials-track-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonials-row {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.testimonials-row-1 {
+  animation: scrollTestimonialsLeft 42s linear infinite;
+}
+
+.testimonials-row-2 {
+  animation: scrollTestimonialsRight 46s linear infinite;
+}
+
+.testimonials-track-container:hover .testimonials-row {
+  animation-play-state: paused;
+}
+
+.testimonials-group {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.testimonial-card {
+  width: 379px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  padding: 28px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.testimonial-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-user-meta h4 {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-gray-dark, #373737);
+  line-height: 1.2;
+}
+
+.testimonial-user-meta p {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 13px;
+  color: #888888;
+  line-height: 1.2;
+}
+
+.testimonial-quote-text {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #555555;
+}
+
+.testimonial-quote-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 36px;
+  height: 36px;
+  opacity: 0.85;
+}
+
+@keyframes scrollTestimonialsLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollTestimonialsRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations for New eSIM Page
+   -------------------------------------------------------------------------- */
+
+/* Large Desktop & Intermediate Screens (1025px - 1300px) */
+@media (max-width: 1300px) {
+
+  .breadcrumbs-section,
+  .filter-toolbar-section,
+  .esim-catalog-section,
+  .comparison-section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .bestsellers-section {
+    padding-left: 40px;
+    padding-right: 0 !important;
+  }
+
+  .bestsellers-header,
+  .bestsellers-slider {
+    padding-right: 40px;
+  }
+
+  .esim-catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .filter-pills-row {
+    justify-content: flex-start;
+    gap: 12px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Tablet Screens (769px - 1024px) */
+@media (max-width: 1024px) {
+
+  .breadcrumbs-section,
+  .filter-toolbar-section,
+  .esim-catalog-section,
+  .comparison-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .bestsellers-section {
+    padding-left: 24px;
+    padding-right: 0 !important;
+  }
+
+  .bestsellers-header,
+  .bestsellers-slider {
+    padding-right: 24px;
+  }
+
+  .new-esim-banner {
+    height: 220px;
+  }
+
+  .new-esim-banner-title {
+    font-size: 32px;
+  }
+
+  .filter-toolbar-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .esim-catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Mobile Screens (<= 768px) */
+@media (max-width: 768px) {
+
+  .breadcrumbs-section,
+  .filter-toolbar-section,
+  .esim-catalog-section,
+  .comparison-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .bestsellers-section {
+    padding-left: 16px;
+    padding-right: 0 !important;
+  }
+
+  .bestsellers-header,
+  .bestsellers-slider {
+    padding-right: 16px;
+  }
+
+  .new-esim-banner {
+    height: 180px;
+  }
+
+  .new-esim-banner-title {
+    font-size: 26px;
+  }
+
+  .filter-pills-row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-pill {
+    flex-shrink: 0;
+    padding: 10px 16px;
+    font-size: 11.5px;
+  }
+
+  .esim-catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .comparison-title,
+  .bestsellers-title {
+    font-size: 26px;
+  }
+
+  .bestsellers-slider {
+    gap: 16px;
+  }
+
+  .bestseller-card {
+    min-width: 250px;
+    flex-shrink: 0;
+  }
+}

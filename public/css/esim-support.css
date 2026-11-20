@@ -1,0 +1,655 @@
+/* ==========================================================================
+   eSIM Support & Troubleshooting Page Styles - Eazy Communications
+   Figma Node: 196:96
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Container
+   -------------------------------------------------------------------------- */
+.support-container {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Section Common Headers
+   -------------------------------------------------------------------------- */
+.support-section-header,
+.support-troubleshoot-header,
+.support-faq-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.support-section-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  line-height: 1.35;
+  color: #373737;
+  letter-spacing: -0.8px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.support-section-subtitle {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #373737;
+  margin: 16px auto 0;
+  max-width: 750px;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Banner Specific Customization
+   -------------------------------------------------------------------------- */
+.support-banner-img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.support-banner-title {
+  max-width: 900px;
+}
+
+/* --------------------------------------------------------------------------
+   Section 1: Quick Help / Common Issues Grid (Figma Node 204:331)
+   -------------------------------------------------------------------------- */
+.support-quick-help-section {
+  width: 100%;
+  padding: 60px 0 100px;
+  background-color: #ffffff;
+}
+
+.support-quick-help-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 22px;
+  width: 100%;
+}
+
+.support-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  height: 160px;
+  padding: 20px 24px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-4px);
+  border-color: #00aeef;
+  box-shadow: 0 12px 24px rgba(0, 174, 239, 0.12);
+}
+
+.support-card-icon-wrap {
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.support-card-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.support-card-content {
+  flex: 1;
+}
+
+.support-card-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 25px;
+  line-height: 1.25;
+  color: #000000;
+  letter-spacing: -0.5px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   Section 2: Troubleshooting Flow (Figma Node 204:460)
+   -------------------------------------------------------------------------- */
+.support-troubleshoot-section {
+  width: 100%;
+  padding: 0 0 100px;
+  background-color: #ffffff;
+}
+
+.support-flow-card {
+  background-color: rgba(0, 174, 239, 0.06);
+  border: 1px solid #00aeef;
+  border-radius: 20px;
+  padding: 55px 50px 60px;
+  box-sizing: border-box;
+}
+
+/* Selection Controls Row */
+.support-flow-selects-row {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 50px;
+}
+
+.support-select-box {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #00aeef;
+  border-radius: 20px;
+  padding: 16px 28px;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support-select-box:hover,
+.support-select-box.active {
+  box-shadow: 0 6px 18px rgba(0, 174, 239, 0.15);
+}
+
+.support-select-label {
+  display: block;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(55, 55, 55, 0.65);
+  margin-bottom: 6px;
+}
+
+.support-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+}
+
+.support-select-val {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: #373737;
+}
+
+.support-select-arrow {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.support-select-box.active .support-select-arrow {
+  transform: rotate(180deg);
+}
+
+.support-select-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #00aeef;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  z-index: 30;
+  display: none;
+}
+
+.support-select-box.active .support-select-dropdown {
+  display: block;
+}
+
+.support-select-option {
+  padding: 14px 28px;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 16px;
+  color: #373737;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.support-select-option:hover {
+  background-color: rgba(0, 174, 239, 0.08);
+  color: #00aeef;
+}
+
+.support-select-option.active {
+  background-color: rgba(0, 174, 239, 0.12);
+  color: #00aeef;
+  font-weight: 500;
+}
+
+/* Steps Flow */
+.support-steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.support-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  flex: 1;
+  max-width: 180px;
+}
+
+.support-step-circle {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f0fbff 0%, #d4f0fc 65%, #b9e7fa 100%);
+  border: 1px solid rgba(0, 174, 239, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 174, 239, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.support-step-item:hover .support-step-circle {
+  transform: scale(1.06);
+  box-shadow: 0 10px 24px rgba(0, 174, 239, 0.22);
+}
+
+.support-step-icon {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  display: block;
+}
+
+.support-step-arrow {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-weight: 300;
+  font-size: 38px;
+  color: #373737;
+  line-height: 1;
+  margin-bottom: 50px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.support-step-text {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  line-height: 1.35;
+  color: #000000;
+  margin: 0;
+  font-weight: 400;
+}
+
+.support-contact-link {
+  color: #00aeef;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.support-contact-link:hover {
+  color: #0081b3;
+}
+
+/* --------------------------------------------------------------------------
+   Section 3: FAQ Accordion ("Got Questions? We’ve Got Answers")
+   Standardized via reusable component: css/faq-section.css
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .support-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .support-quick-help-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .support-card {
+    height: 130px;
+  }
+
+  .support-card-title {
+    font-size: 21px;
+  }
+
+  .support-flow-card {
+    padding: 40px 30px;
+  }
+
+  .support-step-circle {
+    width: 115px;
+    height: 115px;
+  }
+
+  .support-step-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .support-step-text {
+    font-size: 16px;
+  }
+
+  .support-step-arrow {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .support-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .support-section-title {
+    font-size: 32px;
+  }
+
+  .support-section-subtitle {
+    font-size: 16px;
+  }
+
+  .support-flow-selects-row {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 35px;
+  }
+
+  .support-select-box {
+    padding: 14px 20px;
+  }
+
+  .support-select-val {
+    font-size: 17px;
+  }
+
+  .support-steps-container {
+    gap: 8px;
+  }
+
+  .support-step-circle {
+    width: 95px;
+    height: 95px;
+  }
+
+  .support-step-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .support-step-text {
+    font-size: 14px;
+  }
+
+  .support-step-arrow {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .support-quick-help-section,
+  .support-troubleshoot-section,
+  .support-faq-section {
+    padding-bottom: 60px;
+  }
+
+  .support-quick-help-section {
+    padding-top: 40px;
+  }
+
+  .support-section-header,
+  .support-troubleshoot-header,
+  .support-faq-header {
+    margin-bottom: 24px;
+  }
+
+  /* Global section title standard (matching japan-esim.html & typography.css) */
+  .support-section-title {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  /* Global section subtitle standard */
+  .support-section-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555555;
+    margin-top: 8px;
+  }
+
+  .support-quick-help-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .support-card {
+    height: auto;
+    min-height: 80px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    gap: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .support-card-content {
+    flex: 0 1 auto;
+    text-align: center;
+  }
+
+  .support-card-icon-wrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .support-card-title {
+    font-size: 17px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .support-flow-card {
+    padding: 24px 16px 28px;
+    border-radius: 18px;
+  }
+
+  .support-flow-selects-row {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .support-select-box {
+    padding: 12px 18px;
+    border-radius: 14px;
+  }
+
+  .support-select-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .support-select-val {
+    font-size: 15px;
+  }
+
+  .support-select-option {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  /* Troubleshooting Steps: Clean Vertical Stepper for Mobile (No awkward wrapping) */
+  .support-steps-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .support-step-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 174, 239, 0.22);
+    border-radius: 14px;
+    padding: 12px 16px;
+    gap: 14px;
+    box-shadow: 0 2px 8px rgba(0, 174, 239, 0.06);
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .support-step-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 174, 239, 0.14);
+  }
+
+  .support-step-circle {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 174, 239, 0.1);
+  }
+
+  .support-step-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .support-step-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222222;
+    line-height: 1.35;
+    text-align: center;
+    margin: 0;
+    flex: 0 1 auto;
+  }
+
+  .support-step-text br {
+    display: none;
+  }
+
+  .support-step-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 20px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #00aeef;
+    transform: rotate(90deg);
+    line-height: 1;
+  }
+
+  .support-contact-link {
+    color: #00aeef;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .support-section-title {
+    font-size: 24px;
+  }
+
+  .support-section-subtitle {
+    font-size: 13.5px;
+  }
+
+  .support-card {
+    padding: 12px 16px;
+    min-height: 74px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .support-card-content {
+    flex: 0 1 auto;
+    text-align: center;
+  }
+
+  .support-card-icon-wrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .support-card-title {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .support-flow-card {
+    padding: 20px 12px 24px;
+    border-radius: 16px;
+  }
+
+  .support-step-item {
+    padding: 10px 14px;
+    gap: 12px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .support-step-circle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .support-step-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .support-step-text {
+    font-size: 14px;
+    text-align: center;
+    flex: 0 1 auto;
+  }
+}

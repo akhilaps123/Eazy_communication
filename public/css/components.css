@@ -1,0 +1,397 @@
+/* ==========================================================================
+   Reusable UI Components - Eazy Communications
+   ========================================================================== */
+
+/* Containers & Sections */
+.container {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  width: 100%;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-pad-b {
+  padding-bottom: var(--section-py);
+}
+
+.section-pad-y {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+/* Reusable Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary Gradient Button */
+.btn-primary {
+  background: var(--primary-gradient);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  box-shadow: 0px 3px 6px rgba(49, 49, 49, 0.05);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 16px rgba(0, 148, 209, 0.35);
+}
+
+/* Secondary Outline Button */
+.btn-outline {
+  background: transparent;
+  color: var(--primary-cyan);
+  border: 1px solid var(--primary-cyan);
+  border-radius: var(--radius-full);
+  box-shadow: 0px 3px 11px rgba(49, 49, 49, 0.05);
+}
+
+.btn-outline:hover {
+  background: rgba(0, 174, 239, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 174, 239, 0.2);
+}
+
+/* White Solid Button */
+.btn-white {
+  background: var(--color-white);
+  color: var(--primary-bright);
+  border-radius: 60px;
+  font-size: 18px;
+  padding: 14px 40px;
+  font-weight: 400;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.btn-white:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Outline White Pill */
+.btn-outline-white {
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white-30);
+  border-radius: 28px;
+  padding: 8px 30px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Solid White Pill */
+.btn-pill-white {
+  background: var(--color-white);
+  color: var(--primary-bright);
+  border: 1px solid #efefef;
+  border-radius: 28px;
+  padding: 8px 30px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.btn-pill-white:hover {
+  background: #f8fbfe;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Header Get Started Button */
+.btn-get-started {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(270deg, #c4e7ff 0%, #f3f5f7 100%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-pill);
+  height: 50px;
+  padding: 5px 24px 5px 5px;
+  color: var(--color-gray-dark);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 300;
+}
+
+.btn-get-started .icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-get-started .icon-circle img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: var(--radius-xs);
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.badge-popular {
+  background-color: var(--badge-popular);
+}
+
+.badge-best-seller {
+  background-color: var(--badge-seller);
+}
+
+.badge-best-value {
+  background-color: var(--badge-value);
+}
+
+/* Floating Banner Badges */
+.badge-floating {
+  position: absolute;
+  background-color: var(--accent-yellow-light);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 8px 24px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Reusable Tabs / Pill Navigation */
+.pill-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  height: 60px;
+  background: var(--bg-pill-subtle);
+  border-radius: var(--radius-pill);
+  padding: 10px 30px;
+  overflow: hidden;
+}
+
+.pill-tab {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-gray-muted);
+  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 28px;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.pill-tab.active {
+  background: var(--primary-gradient-horizontal);
+  color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 148, 209, 0.25);
+}
+
+.pill-tab:not(.active):hover {
+  color: var(--primary-bright);
+}
+
+/* Star Rating component */
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-rating .star-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ==========================================================================
+   Global Page Hero Banner (1440px x 273px)
+   ========================================================================== */
+.page-banner,
+.new-esim-banner {
+  width: 100%;
+  height: 273px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b333a;
+}
+
+.page-banner-img,
+.new-esim-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.page-banner-overlay,
+.new-esim-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.page-banner-content,
+.new-esim-banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.page-banner-title,
+.new-esim-banner-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--color-white, #ffffff);
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   Global Breadcrumbs Navigation (Height: 52px)
+   ========================================================================== */
+.breadcrumbs-section {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #fafafa;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: rgba(103, 103, 103, 0.5);
+}
+
+.breadcrumbs-list a {
+  color: rgba(103, 103, 103, 0.5);
+  text-decoration: none;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.breadcrumbs-list a:hover {
+  color: rgba(103, 103, 103, 0.9);
+}
+
+.breadcrumbs-sep {
+  color: rgba(103, 103, 103, 0.5);
+  user-select: none;
+}
+
+.breadcrumbs-current {
+  color: rgba(103, 103, 103, 0.5);
+  font-weight: 400;
+}
+
+@media (max-width: 1300px) {
+  .breadcrumbs-section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner,
+  .new-esim-banner {
+    height: 200px;
+  }
+
+  .page-banner-title,
+  .new-esim-banner-title {
+    font-size: 28px;
+  }
+
+  .breadcrumbs-section {
+    padding: 12px 20px;
+  }
+
+  .breadcrumbs-list {
+    font-size: 12px;
+    letter-spacing: 1px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-banner,
+  .new-esim-banner {
+    height: 180px;
+  }
+
+  .page-banner-title,
+  .new-esim-banner-title {
+    font-size: 24px;
+  }
+}
+
+/* Responsive container width adjustments for smaller viewports */
+@media (max-width: 768px) {
+  :root {
+    --container-width: 90%;
+    --container-gap: 5%;
+    --section-px: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-width: 92%;
+    --container-gap: 4%;
+    --section-px: 4%;
+  }
+}
+
+

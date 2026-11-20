@@ -1,0 +1,125 @@
+/* ==========================================================================
+   "Have Questions? We're Here for You" Reusable Component
+   ========================================================================== */
+
+.questions-section {
+  position: relative;
+  width: 100%;
+  min-height: 529px;
+  background-color: #3170b8;
+  background-image: url("../assets/images/Get-in-touch.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content Container */
+.questions-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.questions-heading {
+  font-family: var(--font-heading);
+  font-size: 50px;
+  line-height: 1.22;
+  font-weight: 400;
+  color: var(--color-white);
+  letter-spacing: -0.01em;
+}
+
+.questions-description {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 300;
+  color: rgba(250, 250, 250, 0.6);
+  letter-spacing: 0.2px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.questions-btn {
+  height: 56px;
+  border-radius: 60px;
+  padding: 0 40px;
+  background: #ffffff;
+  color: #0094d1;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 0;
+}
+
+.questions-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .questions-section {
+    min-height: 480px;
+    padding: 80px 40px;
+  }
+  .questions-heading {
+    font-size: 38px;
+  }
+  .questions-description {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .questions-section {
+    min-height: 440px;
+    padding: 60px 20px;
+  }
+  .questions-heading {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+  .questions-description {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .questions-btn {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .questions-section {
+    min-height: 400px;
+    padding: 50px 16px;
+  }
+  .questions-heading {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .questions-description {
+    font-size: 14.5px;
+    line-height: 22px;
+  }
+}
+

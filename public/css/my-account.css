@@ -1,0 +1,865 @@
+/* ==========================================================================
+   My Account Page Stylesheet
+   Figma Node: 253:109 (Eazy Communications - My Account)
+   Design System & Global CSS Tokens Integration
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Container & Background
+   -------------------------------------------------------------------------- */
+.account-page-main {
+  background-color: var(--color-white, #ffffff);
+  width: 100%;
+  overflow-x: clip;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Banner & Breadcrumbs
+   -------------------------------------------------------------------------- */
+.account-banner {
+  position: relative;
+  width: 100%;
+  height: 273px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.account-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  z-index: 1;
+}
+
+.account-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.account-banner-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.account-banner-title {
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumbs Component Override (if needed)
+   -------------------------------------------------------------------------- */
+.account-breadcrumbs {
+  background-color: #fafafa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.account-breadcrumbs-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.account-breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading, 'Questrial', sans-serif);
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: rgba(103, 103, 103, 0.5);
+}
+
+.account-breadcrumbs-list a {
+  color: rgba(103, 103, 103, 0.5);
+  text-decoration: none;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.account-breadcrumbs-list a:hover {
+  color: var(--color-primary, #0094d1);
+}
+
+.account-breadcrumbs-sep {
+  color: rgba(103, 103, 103, 0.5);
+}
+
+.account-breadcrumbs-current {
+  color: rgba(103, 103, 103, 0.8);
+}
+
+/* --------------------------------------------------------------------------
+   Account Content Section & Groups
+   -------------------------------------------------------------------------- */
+.account-section {
+  width: 100%;
+  padding: 60px 0 100px;
+}
+
+.account-container {
+  width: var(--container-width, 86.11%);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.account-group {
+  margin-bottom: 60px;
+}
+
+.account-group:last-child {
+  margin-bottom: 0;
+}
+
+.account-group-title {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgba(55, 55, 55, 0.5);
+  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Card Container for grouped items */
+.account-card-group {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+.account-card-group .account-row:first-child {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.account-card-group .account-row:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Single Item Row */
+.account-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 172px;
+  padding: 27px 42px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color var(--transition-fast, 0.2s ease);
+  position: relative;
+}
+
+.account-card-group .account-row:last-child {
+  border-bottom: none;
+}
+
+.account-row:hover {
+  background-color: rgba(0, 148, 209, 0.02);
+}
+
+/* Left portion: Icon Badge + Text */
+.account-row-left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Icon Badge */
+.account-badge {
+  width: 118px;
+  height: 118px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.account-row:hover .account-badge {
+  transform: scale(1.03);
+}
+
+.account-badge img {
+  display: block;
+  max-width: 55px;
+  max-height: 55px;
+  object-fit: contain;
+}
+
+/* Badge background colors per Figma node 253:109 */
+.badge-sim {
+  background-color: #e4f0fe;
+}
+.badge-archive {
+  background-color: #e9e6fc;
+}
+.badge-rewards {
+  background-color: #e9f8e2;
+}
+.badge-cart {
+  background-color: #fef2e1;
+}
+.badge-cards {
+  background-color: #fdebef;
+}
+.badge-currency {
+  background-color: #e1f7ed;
+}
+.badge-language {
+  background-color: #e9edfd;
+}
+.badge-bell {
+  background-color: #fee6e5;
+}
+.badge-support {
+  background-color: #e7f2fe;
+}
+.badge-help {
+  background-color: #e3f7ef;
+}
+.badge-logout {
+  background-color: #fee6e5;
+}
+.badge-trash {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  min-width: 45px;
+  border-radius: 0;
+}
+
+.badge-trash img {
+  max-width: 45px;
+  max-height: 45px;
+}
+
+/* Text details */
+.account-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.account-title {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 30px;
+  font-weight: 500;
+  color: #373737;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.account-subtitle {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 300;
+  color: rgba(55, 55, 55, 0.5);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Right portion: Value / Dropdown Pill / Chevron */
+.account-row-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.account-value {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 30px;
+  font-weight: 500;
+  color: #00aeef;
+  line-height: 1;
+  letter-spacing: -0.2px;
+}
+
+.account-chevron {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.account-chevron img {
+  display: block;
+  width: 20px;
+  height: 10px;
+  transform: rotate(-90deg);
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.account-row:hover .account-chevron img {
+  transform: rotate(-90deg) translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   Pill Dropdown Selectors (Currency & Language)
+   -------------------------------------------------------------------------- */
+.account-dropdown-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.account-dropdown-wrapper.open {
+  z-index: 30;
+}
+
+.account-row:has(.account-dropdown-wrapper.open) {
+  z-index: 30;
+}
+
+.account-pill-btn {
+  width: 291px;
+  height: 90px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s ease);
+  user-select: none;
+}
+
+.account-pill-btn:hover {
+  border-color: rgba(0, 148, 209, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.account-pill-btn:focus-visible {
+  outline: 2px solid var(--color-primary, #0094d1);
+  outline-offset: 2px;
+}
+
+.account-pill-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.account-pill-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.account-pill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.account-pill-icon-lang {
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.account-pill-icon-lang img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.account-pill-label {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 30px;
+  font-weight: 500;
+  color: #373737;
+  line-height: 1;
+}
+
+.account-pill-arrow {
+  width: 20px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.account-pill-arrow img {
+  width: 20px;
+  height: 10px;
+  display: block;
+}
+
+.account-dropdown-wrapper.open .account-pill-arrow img {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.account-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all var(--transition-fast, 0.2s ease);
+  z-index: 20;
+}
+
+.account-dropdown-wrapper.open .account-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.account-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: #373737;
+  cursor: pointer;
+  transition: background-color var(--transition-fast, 0.2s ease);
+}
+
+.account-dropdown-item:hover {
+  background-color: #f4f9fc;
+  color: var(--color-primary, #0094d1);
+}
+
+.account-dropdown-item.active {
+  background-color: #eaf4fb;
+  color: var(--color-primary, #0094d1);
+}
+
+/* --------------------------------------------------------------------------
+   Account Settings Cards (Logout & Delete)
+   -------------------------------------------------------------------------- */
+.account-settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.account-card-single {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.03);
+  min-height: 172px;
+  padding: 27px 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-fast, 0.2s ease);
+  cursor: pointer;
+}
+
+.account-card-single:hover {
+  background-color: rgba(0, 148, 209, 0.02);
+  border-color: rgba(0, 148, 209, 0.2);
+}
+
+/* Delete Card specifics (Figma node 254:597) */
+.account-card-delete {
+  background: #fef5f4;
+  border: 1px solid #fdeaea;
+}
+
+.account-card-delete:hover {
+  background: #fdefee;
+  border-color: rgba(221, 52, 55, 0.4);
+}
+
+.account-card-delete .account-title {
+  color: #dd3437;
+}
+
+.account-card-delete .account-subtitle {
+  color: #dd3437;
+  opacity: 0.9;
+}
+
+.account-card-delete .account-chevron img {
+  transform: rotate(-90deg);
+}
+
+.account-card-delete:hover .account-chevron img {
+  transform: rotate(-90deg) translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+
+/* Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .account-container {
+    padding: 0 40px;
+  }
+
+  .account-breadcrumbs-inner {
+    padding: 14px 40px;
+  }
+
+  .account-section {
+    padding: 40px 0 80px;
+  }
+
+  .account-group {
+    margin-bottom: 45px;
+  }
+
+  .account-row,
+  .account-card-single {
+    min-height: 130px;
+    padding: 20px 30px;
+  }
+
+  .account-row-left {
+    gap: 24px;
+  }
+
+  .account-badge {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
+
+  .account-badge img {
+    max-width: 38px;
+    max-height: 38px;
+  }
+
+  .badge-trash img {
+    max-width: 36px;
+    max-height: 36px;
+  }
+
+  .account-title {
+    font-size: 24px;
+  }
+
+  .account-subtitle {
+    font-size: 16px;
+  }
+
+  .account-value {
+    font-size: 24px;
+  }
+
+  .account-pill-btn {
+    width: 220px;
+    height: 70px;
+    padding: 0 18px;
+    border-radius: 16px;
+  }
+
+  .account-pill-label {
+    font-size: 22px;
+  }
+
+  .account-pill-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .account-pill-icon-lang {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  .account-banner {
+    height: 160px;
+  }
+
+  .account-banner-title {
+    font-size: 24px;
+  }
+
+  .account-breadcrumbs-inner {
+    padding: 10px 16px;
+  }
+
+  .account-breadcrumbs-list {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+  }
+
+  .account-container {
+    padding: 0 16px;
+  }
+
+  .account-section {
+    padding: 24px 0 50px;
+  }
+
+  .account-group {
+    margin-bottom: 28px;
+  }
+
+  .account-group-title {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    margin-bottom: 10px;
+  }
+
+  .account-card-group,
+  .account-card-single {
+    border-radius: 14px;
+  }
+
+  .account-card-group .account-row:first-child {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+  }
+
+  .account-card-group .account-row:last-child {
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  .account-settings-list {
+    gap: 12px;
+  }
+
+  .account-row,
+  .account-card-single {
+    min-height: auto;
+    padding: 11px 12px;
+    gap: 10px;
+  }
+
+  .account-row-left {
+    gap: 10px;
+  }
+
+  /* Reduced icon badges on mobile */
+  .account-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .account-badge img {
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+  .badge-trash {
+    min-width: 32px;
+  }
+
+  .badge-trash img {
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+  /* Reduced typography on mobile */
+  .account-text {
+    gap: 3px;
+  }
+
+  .account-title {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .account-subtitle {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .account-row-right {
+    margin-left: 6px;
+    gap: 10px;
+  }
+
+  .account-value {
+    font-size: 14px;
+  }
+
+  .account-chevron {
+    width: 10px;
+    height: 10px;
+  }
+
+  .account-chevron img {
+    width: 10px;
+    height: 6px;
+  }
+
+  /* Compact dropdown pills on mobile */
+  .account-pill-btn {
+    width: 105px;
+    height: 36px;
+    padding: 0 8px;
+    border-radius: 10px;
+  }
+
+  .account-pill-left {
+    gap: 6px;
+  }
+
+  .account-pill-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .account-pill-icon-lang {
+    width: 17px;
+    height: 17px;
+  }
+
+  .account-pill-label {
+    font-size: 12px;
+  }
+
+  .account-pill-arrow {
+    width: 9px;
+    height: 5px;
+  }
+
+  .account-pill-arrow img {
+    width: 9px;
+    height: 5px;
+  }
+
+  .account-dropdown-menu {
+    width: 140px;
+    border-radius: 10px;
+    padding: 4px 0;
+  }
+
+  .account-dropdown-item {
+    font-size: 12px;
+    padding: 8px 12px;
+    gap: 8px;
+  }
+}
+
+/* Extra small mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+  .account-container {
+    padding: 0 10px;
+  }
+
+  .account-banner-title {
+    font-size: 20px;
+  }
+
+  .account-breadcrumbs-list {
+    font-size: 10px;
+  }
+
+  .account-group-title {
+    font-size: 12px;
+  }
+
+  .account-row,
+  .account-card-single {
+    padding: 9px 10px;
+    gap: 8px;
+  }
+
+  .account-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .account-badge img {
+    max-width: 17px;
+    max-height: 17px;
+  }
+
+  .badge-trash img {
+    max-width: 17px;
+    max-height: 17px;
+  }
+
+  .account-title {
+    font-size: 13px;
+  }
+
+  .account-subtitle {
+    font-size: 10.5px;
+  }
+
+  .account-value {
+    font-size: 13px;
+  }
+
+  .account-pill-btn {
+    width: 95px;
+    height: 32px;
+    padding: 0 6px;
+  }
+
+  .account-pill-label {
+    font-size: 11px;
+  }
+
+  .account-pill-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .account-pill-icon-lang {
+    width: 15px;
+    height: 15px;
+  }
+}

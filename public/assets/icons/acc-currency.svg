@@ -1,0 +1,18 @@
+<svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Top Arc -->
+  <path d="M4.18 24.46C6.34 13.58 15.95 5.38 27.47 5.38C39.63 5.38 49.65 14.5 51.05 26.26" stroke="#17A068" stroke-width="2.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Top Arrow -->
+  <path d="M46.5 22L51.68 26.8L54 21" stroke="#17A068" stroke-width="2.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom Arc -->
+  <path d="M50.43 31.55C47.81 41.8 38.5 49.38 27.42 49.38C15.99 49.38 6.44 41.32 4.18 30.58" stroke="#17A068" stroke-width="2.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Bottom Arrow -->
+  <path d="M8.5 33L3.32 28.2L1 34" stroke="#17A068" stroke-width="2.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Dollar Sign S-Curve -->
+  <g transform="translate(16.7, 15.6)">
+    <path d="M20.17 17.57V17.83C20.17 20.33 18.14 22.36 15.63 22.36H5.91C3.41 22.36 1.38 20.33 1.38 17.83C1.38 16.13 2.51 14.64 4.15 14.18L17.4 10.49C19.03 10.03 20.17 8.54 20.17 6.84V5.9C20.17 3.4 18.14 1.38 15.63 1.38H5.91C3.41 1.38 1.38 3.4 1.38 5.9V6.55" stroke="#17A068" stroke-width="2.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Dollar Vertical Bar -->
+  <line x1="27.5" y1="12" x2="27.5" y2="43" stroke="#17A068" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
